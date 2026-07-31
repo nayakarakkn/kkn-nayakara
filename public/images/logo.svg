@@ -1,0 +1,5 @@
+<svg width="250" height="60" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15 30L35 18L55 30L35 42L15 30Z" fill="#10b981"/>
+  <path d="M20 33.5v12c0 4 15 8 15 8s15-4 15-8v-12l-15 9L20 33.5z" fill="#059669"/>
+  <text x="65" y="40" font-family="'Plus Jakarta Sans', sans-serif, Arial" font-weight="900" font-size="28" fill="#1e293b">UIN<tspan fill="#10b981">Connect</tspan></text>
+</svg>
