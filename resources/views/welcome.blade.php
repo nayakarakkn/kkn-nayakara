@@ -15,15 +15,15 @@
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                         </span>
-                        <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase">Informasi Publik Keranggan</span>
+                        <span class="text-xs font-bold text-emerald-800 tracking-wider uppercase">Kelurahan Keranggan</span>
                     </div>
                     
                     <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl lg:text-5xl leading-[1.18] mb-6">
-                        Pusat Informasi Publik <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Keranggan</span>
+                        Pusat Informasi Publik <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Kelurahan Keranggan</span>
                     </h1>
                     
                     <p class="text-base text-slate-600 sm:text-lg mb-8 leading-relaxed">
-                        Selamat datang di <strong class="font-bold text-slate-900">Keranggan</strong>. Wadah informasi terpadu untuk menemukan direktori usaha UMKM, fasilitas umum, layanan kesehatan, pendidikan, hingga peta lokasi wilayah Keranggan.
+                        Selamat datang di <strong class="font-bold text-slate-900">Kelurahan Keranggan</strong>. Wadah informasi terpadu untuk menemukan direktori usaha UMKM, fasilitas umum, layanan kesehatan, pendidikan, hingga peta lokasi wilayah Keranggan.
                     </p>
                     
                     <!-- Action Buttons -->
@@ -188,7 +188,7 @@
                     <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
                     Ekonomi Lokal ({{ $umkms->count() }} Usaha UMKM Terverifikasi)
                 </span>
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-3">Direktori <span class="text-emerald-600">UMKM Keranggan</span></h2>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-3">UMKM <span class="text-emerald-600">Keranggan</span></h2>
                 <p class="text-slate-500 text-sm max-w-lg mx-auto">Temukan dan dukung ragam usaha kuliner, jasa, hingga kerajinan buatan warga di lingkungan kita.</p>
                 
                 <div class="mt-4">
@@ -663,9 +663,9 @@
             <div class="text-center mb-10">
                 <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-emerald-200/80 bg-emerald-50 text-emerald-700 font-semibold text-xs mb-3 shadow-xs">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
-                    Medis & Darurat ({{ $health_infos->count() }} Layanan Kesehatan)
+                    Layanan Kesehatan ({{ $health_infos->count() }} Layanan Terdaftar)
                 </span>
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-3">Kesehatan & <span class="text-emerald-600">Kontak Darurat</span></h2>
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-3">Kesehatan <span class="text-emerald-600">Keranggan</span></h2>
                 <p class="text-slate-500 text-sm max-w-lg mx-auto">Lokasi puskesmas, klinik, apotek, dan nomor darurat penting di sekitar wilayah Keranggan.</p>
             </div>
             

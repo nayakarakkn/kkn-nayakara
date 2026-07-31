@@ -63,7 +63,10 @@
                             <div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                             <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo Keranggan" class="h-8 w-8 object-contain relative z-10">
                         </div>
-                        <span class="text-2xl font-bold text-slate-900 tracking-tight flex items-center">Keranggan</span>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-2xl font-bold text-slate-900 tracking-tight leading-none">Keranggan</span>
+                            <span class="text-[10px] font-bold text-emerald-600 tracking-wider uppercase mt-0.5">Kelurahan Keranggan</span>
+                        </div>
                     </a>
                     
                     <!-- Desktop Menu -->
@@ -83,12 +86,6 @@
                         <!-- 3. Fasilitas Publik -->
                         <a href="#fasilitas" data-section="fasilitas" class="nav-link relative px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-600 border border-transparent hover:text-emerald-700 hover:bg-emerald-50/80 hover:border-emerald-100/50">
                             Fasilitas Publik
-                        </a>
-
-                        <!-- 4. Pengaduan Warga -->
-                        <a href="#pengaduan" data-section="pengaduan" class="nav-link relative px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-600 border border-transparent hover:text-emerald-700 hover:bg-emerald-50/80 hover:border-emerald-100/50">
-                            Pengaduan Warga
-                            <div class="active-dot absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-emerald-600 rounded-full transition-opacity duration-300 opacity-0"></div>
                         </a>
 
                         <!-- 5. Dropdown Layanan & Informasi -->
@@ -203,14 +200,14 @@
                         <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo Keranggan" class="h-10 w-10 object-contain bg-white rounded-xl p-1 shadow-sm">
                         <div>
                             <span class="text-xl font-bold text-white tracking-tight">Keranggan</span>
-                            <p class="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase">Pusat Informasi Publik Keranggan</p>
+                            <p class="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase">Kelurahan Keranggan</p>
                         </div>
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed">
                         Portal resmi sistem informasi pelayanan publik, direktori usaha UMKM, fasilitas publik, kesehatan, pendidikan, dan panduan wilayah Keranggan.
                     </p>
                     <div class="pt-2 text-xs text-slate-400 space-y-1.5">
-                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Keranggan, Tangerang</p>
+                        <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Kelurahan Keranggan, Kecamatan Setu, Kota Tangerang Selatan</p>
                         <p class="flex items-center"><svg class="w-4 h-4 mr-2 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> kkn.nayakara@gmail.com</p>
                     </div>
                 </div>
@@ -267,28 +264,12 @@
                             </div>
                         </a>
                     </div>
-
-                    <!-- Helpdesk Bar -->
-                    <div class="mt-5 p-4 rounded-2xl bg-gradient-to-r from-emerald-950/60 to-slate-800/80 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 border border-emerald-500/30">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                            </div>
-                            <div>
-                                <h5 class="text-xs font-bold text-white">Butuh Bantuan & Informasi Layanan?</h5>
-                                <p class="text-[11px] text-slate-400">Layanan pengaduan dan informasi via Email / WhatsApp.</p>
-                            </div>
-                        </div>
-                        <a href="mailto:kkn.nayakara@gmail.com" class="w-full sm:w-auto px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-sm flex items-center justify-center whitespace-nowrap">
-                            Hubungi Email Resmi
-                        </a>
-                    </div>
                 </div>
             </div>
 
             <!-- Bottom Copyright Bar -->
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>&copy; {{ date('Y') }} kkn nayakara. Hak cipta dilindungi undang-undang.</p>
+                <p>&copy; {{ date('Y') }} KKN NAYAKARA. Hak cipta dilindungi undang-undang.</p>
                 <div class="flex items-center space-x-4">
                     <a href="mailto:kkn.nayakara@gmail.com" class="hover:text-emerald-400 transition-colors">kkn.nayakara@gmail.com</a>
                     <span class="text-slate-700">•</span>
