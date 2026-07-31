@@ -130,10 +130,11 @@
     </div>
 
     <!-- Official Kop Surat -->
-    <div class="header-kop">
+    <div class="header-kop" style="position: relative;">
+        <img src="{{ asset('images/logo_tangsel.png') }}" style="position: absolute; left: 15px; top: 0px; height: 65px;" alt="Logo Kota Tangerang Selatan">
         <h2>PENGURUS KELURAHAN KERANGGAN</h2>
         <h3>PORTAL INFORMASI PUBLIK KERANGGAN</h3>
-        <p>Keranggan, Tangerang | Contact: kkn.nayakara@gmail.com</p>
+        <p>Kelurahan Keranggan, Kecamatan Setu, Kota Tangerang Selatan | Contact: kkn.nayakara@gmail.com</p>
     </div>
 
     <!-- Document Header Title -->

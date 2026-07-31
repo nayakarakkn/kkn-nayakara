@@ -61,7 +61,7 @@
                     <a href="#" class="flex-shrink-0 flex items-center group cursor-pointer">
                         <div class="relative w-10 h-10 rounded-xl bg-white flex items-center justify-center mr-3 shadow-lg shadow-emerald-200 group-hover:shadow-emerald-300 group-hover:scale-105 transition-all duration-500 overflow-hidden border border-emerald-50">
                             <div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                            <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo Keranggan" class="h-8 w-8 object-contain relative z-10">
+                            <img src="{{ asset('images/logo_tangsel.jpeg') }}" alt="Logo Tangerang Selatan" class="h-9 w-9 object-contain relative z-10">
                         </div>
                         <div class="flex flex-col justify-center">
                             <span class="text-2xl font-bold text-slate-900 tracking-tight leading-none">Keranggan</span>
@@ -197,7 +197,7 @@
                 <!-- Col 1: Identity & About -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3">
-                        <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo Keranggan" class="h-10 w-10 object-contain bg-white rounded-xl p-1 shadow-sm">
+                        <img src="{{ asset('images/logo_tangsel.jpeg') }}" alt="Logo Tangerang Selatan" class="h-10 w-10 object-contain bg-white rounded-xl p-1 shadow-sm">
                         <div>
                             <span class="text-xl font-bold text-white tracking-tight">Keranggan</span>
                             <p class="text-[10px] font-semibold text-emerald-400 tracking-wider uppercase">Kelurahan Keranggan</p>

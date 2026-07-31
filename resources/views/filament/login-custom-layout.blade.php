@@ -321,11 +321,11 @@
             banner.innerHTML = `
                 <div class="login-left-content">
                     <div class="login-uin-badge">
-                        <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo UIN Syarif Hidayatullah" class="uin-logo-img">
+                        <img src="{{ asset('images/logo_tangsel.png') }}" alt="Logo Kota Tangerang Selatan" class="uin-logo-img">
                         <span class="uin-badge-text">KKN NAYAKARA</span>
                     </div>
                     <div class="login-brand-title">KERANGGAN</div>
-                    <div class="login-brand-subtitle">Pusat Informasi Publik Keranggan</div>
+                    <div class="login-brand-subtitle">Kelurahan Keranggan</div>
                 </div>
             `;
             mainCtn.insertBefore(banner, mainCtn.firstChild);

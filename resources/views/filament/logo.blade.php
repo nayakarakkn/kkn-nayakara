@@ -1,7 +1,7 @@
 <div style="display: flex; align-items: center; gap: 0.95rem; padding-top: 0.1rem; padding-bottom: 0.1rem; cursor: pointer;">
-    <!-- Logo Icon UIN -->
+    <!-- Logo Icon Tangsel -->
     <div style="width: 3.25rem; height: 3.25rem; border-radius: 0.85rem; background-color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06); border: 1px solid #e2e8f0; flex-shrink: 0; overflow: hidden;">
-        <img src="{{ asset('images/logo_uin.jpeg') }}" alt="Logo UIN Syarif Hidayatullah" style="height: 2.75rem; width: 2.75rem; object-fit: contain;">
+        <img src="{{ asset('images/logo_tangsel.png') }}" alt="Logo Kota Tangerang Selatan" style="height: 2.75rem; width: 2.75rem; object-fit: contain;">
     </div>
     
     <!-- 2-Line Title Layout -->
