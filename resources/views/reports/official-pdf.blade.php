@@ -133,7 +133,7 @@
     <div class="header-kop">
         <h2>PENGURUS KELURAHAN KERANGGAN</h2>
         <h3>PORTAL INFORMASI PUBLIK KERANGGAN</h3>
-        <p>Keranggan, Jakarta Timur | Contact: kkn.nayakara@gmail.com</p>
+        <p>Keranggan, Tangerang | Contact: kkn.nayakara@gmail.com</p>
     </div>
 
     <!-- Document Header Title -->
@@ -312,9 +312,9 @@
 
     <!-- Official Signature Section -->
     <div class="ttd-container">
-        <p>Jakarta, {{ date('d F Y') }}<br>Mengetahui,<br><strong>Pengurus Kelurahan Keranggan</strong></p>
+        <p>Tangerang, {{ date('d F Y') }}<br>Mengetahui,<br><strong>Pengurus Kelurahan Keranggan</strong></p>
         <div class="ttd-space"></div>
-        <p><u>( Pengurus Keranggan )</u><br><span style="font-size: 8.5pt; color: #64748b;">Kelurahan Keranggan, Jakarta Timur</span></p>
+        <p><u>( Pengurus Keranggan )</u><br><span style="font-size: 8.5pt; color: #64748b;">Kelurahan Keranggan, Tangerang</span></p>
     </div>
 
 </body>
