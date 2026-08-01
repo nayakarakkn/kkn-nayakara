@@ -54,7 +54,6 @@ class UmkmForm
                     ->disk('public')
                     ->directory('umkms')
                     ->visibility('public')
-                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }

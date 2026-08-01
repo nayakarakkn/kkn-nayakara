@@ -35,7 +35,6 @@ class FacilityForm
                     ->disk('public')
                     ->directory('facilities')
                     ->visibility('public')
-                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }

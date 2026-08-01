@@ -33,7 +33,6 @@ class EcotourismForm
                     ->disk('public')
                     ->directory('ecotourisms')
                     ->visibility('public')
-                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }
