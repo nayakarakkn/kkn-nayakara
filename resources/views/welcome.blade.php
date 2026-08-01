@@ -666,7 +666,7 @@
                     Layanan Kesehatan ({{ $health_infos->count() }} Layanan Terdaftar)
                 </span>
                 <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-3">Kesehatan <span class="text-emerald-600">Keranggan</span></h2>
-                <p class="text-slate-500 text-sm max-w-lg mx-auto">Lokasi puskesmas, klinik, apotek, dan nomor darurat penting di sekitar wilayah Keranggan.</p>
+                <p class="text-slate-500 text-sm max-w-lg mx-auto">Lokasi puskesmas, klinik, apotek, dan fasilitas kesehatan di sekitar wilayah Keranggan.</p>
             </div>
             
             <!-- Search Input Bar -->
