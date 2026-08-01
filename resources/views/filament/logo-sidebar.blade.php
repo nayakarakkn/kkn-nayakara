@@ -9,7 +9,7 @@
                 Keranggan
             </span>
             <span style="font-size: 0.685rem; font-weight: 600; color: #059669; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; margin-top: 2px;">
-                Pusat Informasi Publik
+                Kelurahan Keranggan
             </span>
         </div>
     </div>

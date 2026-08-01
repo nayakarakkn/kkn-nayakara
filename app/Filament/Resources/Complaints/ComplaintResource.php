@@ -17,7 +17,7 @@ class ComplaintResource extends Resource
 {
     protected static ?string $model = Complaint::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static bool $shouldRegisterNavigation = false;
 
     protected static ?string $navigationLabel = 'Pengaduan Warga';
 
