@@ -51,7 +51,9 @@ class UmkmForm
                 FileUpload::make('image')
                     ->label('Foto Usaha/Produk')
                     ->image()
-                    ->imageEditor()
+                    ->disk('public')
+                    ->directory('umkms')
+                    ->maxSize(10240)
                     ->columnSpanFull(),
             ]);
     }

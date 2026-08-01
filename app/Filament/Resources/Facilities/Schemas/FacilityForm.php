@@ -32,7 +32,9 @@ class FacilityForm
                 FileUpload::make('image')
                     ->label('Foto Fasilitas')
                     ->image()
-                    ->imageEditor()
+                    ->disk('public')
+                    ->directory('facilities')
+                    ->maxSize(10240)
                     ->columnSpanFull(),
             ]);
     }

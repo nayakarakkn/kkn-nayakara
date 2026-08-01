@@ -30,7 +30,9 @@ class EcotourismForm
                 FileUpload::make('image')
                     ->label('Foto Tempat')
                     ->image()
-                    ->imageEditor()
+                    ->disk('public')
+                    ->directory('ecotourisms')
+                    ->maxSize(10240)
                     ->columnSpanFull(),
             ]);
     }
