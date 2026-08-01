@@ -105,19 +105,19 @@
         }
 
         .login-brand-title {
-            font-size: 1.65rem;
-            font-weight: 700;
+            font-size: 1.45rem;
+            font-weight: 500;
             color: #ffffff;
-            letter-spacing: -0.015em;
+            letter-spacing: 0.02em;
             line-height: 1.1;
         }
 
         .login-brand-subtitle {
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.775rem;
+            font-weight: 500;
             color: #a7f3d0;
-            letter-spacing: 0.02em;
-            margin-top: 3px;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
         }
 
         .fi-simple-main-ctn > main {
