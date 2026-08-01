@@ -79,16 +79,15 @@
             color: #ffffff;
         }
 
-        .login-uin-badge {
+        .login-brand-header {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            margin-bottom: 0.65rem;
+            gap: 1.1rem;
         }
 
         .uin-logo-img {
-            width: 2.2rem;
-            height: 2.2rem;
+            width: 3.5rem;
+            height: 3.5rem;
             object-fit: contain;
             background-color: transparent !important;
             border-radius: 0;
@@ -96,30 +95,29 @@
             box-shadow: none !important;
             border: none !important;
             flex-shrink: 0;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4));
         }
 
-        .uin-badge-text {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #ffffff;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
+        .login-brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .login-brand-title {
-            font-size: 1.35rem;
-            font-weight: 600;
+            font-size: 1.65rem;
+            font-weight: 700;
             color: #ffffff;
-            letter-spacing: -0.01em;
-            line-height: 1.25;
+            letter-spacing: -0.015em;
+            line-height: 1.1;
         }
 
         .login-brand-subtitle {
-            font-size: 0.775rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 600;
             color: #a7f3d0;
-            margin-top: 0.2rem;
+            letter-spacing: 0.02em;
+            margin-top: 3px;
         }
 
         .fi-simple-main-ctn > main {
@@ -321,12 +319,13 @@
             banner.className = 'login-left-custom-banner';
             banner.innerHTML = `
                 <div class="login-left-content">
-                    <div class="login-uin-badge">
+                    <div class="login-brand-header">
                         <img src="{{ asset('images/logo_tangsel.png') }}" alt="Logo Kota Tangerang Selatan" class="uin-logo-img">
-                        <span class="uin-badge-text">KKN NAYAKARA</span>
+                        <div class="login-brand-text">
+                            <div class="login-brand-title">KERANGGAN</div>
+                            <div class="login-brand-subtitle">Kelurahan Keranggan</div>
+                        </div>
                     </div>
-                    <div class="login-brand-title">KERANGGAN</div>
-                    <div class="login-brand-subtitle">Kelurahan Keranggan</div>
                 </div>
             `;
             mainCtn.insertBefore(banner, mainCtn.firstChild);
