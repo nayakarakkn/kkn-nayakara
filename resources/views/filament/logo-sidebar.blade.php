@@ -1,9 +1,7 @@
 <div style="padding: 1.15rem 1.25rem 0.95rem 1.25rem; margin-bottom: 0.5rem; border-bottom: 1px solid #f1f5f9;">
     <div style="display: flex; align-items: center; gap: 0.95rem; cursor: pointer;">
-        <!-- Logo Icon Tangsel -->
-        <div style="width: 3rem; height: 3rem; border-radius: 0.8rem; background-color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; flex-shrink: 0; overflow: hidden;">
-            <img src="{{ asset('images/logo_tangsel.png') }}" alt="Logo Kota Tangerang Selatan" style="height: 2.5rem; width: 2.5rem; object-fit: contain;">
-        </div>
+        <!-- Logo Icon Tangsel (Clean Transparent) -->
+        <img src="{{ asset('images/logo_tangsel.png') }}" alt="Logo Kota Tangerang Selatan" style="height: 2.5rem; width: 2.5rem; object-fit: contain; flex-shrink: 0;">
         
         <!-- 2-Line Title Layout -->
         <div style="display: flex; flex-direction: column; justify-content: center; line-height: 1.2;">

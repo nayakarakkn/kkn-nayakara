@@ -87,15 +87,16 @@
         }
 
         .uin-logo-img {
-            width: 1.85rem;
-            height: 1.85rem;
+            width: 2.2rem;
+            height: 2.2rem;
             object-fit: contain;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            padding: 0.15rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            background-color: transparent !important;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none !important;
+            border: none !important;
             flex-shrink: 0;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
         .uin-badge-text {
