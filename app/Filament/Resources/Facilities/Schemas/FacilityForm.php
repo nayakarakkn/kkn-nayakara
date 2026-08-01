@@ -31,7 +31,7 @@ class FacilityForm
 
                 FileUpload::make('image')
                     ->label('Foto Fasilitas')
-                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp', 'image/jpg'])
                     ->disk('public')
                     ->directory('facilities')
                     ->visibility('public')

@@ -50,7 +50,7 @@ class UmkmForm
 
                 FileUpload::make('image')
                     ->label('Foto Usaha/Produk')
-                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp', 'image/jpg'])
                     ->disk('public')
                     ->directory('umkms')
                     ->visibility('public')

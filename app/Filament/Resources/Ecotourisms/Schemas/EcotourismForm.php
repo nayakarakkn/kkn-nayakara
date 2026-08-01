@@ -29,7 +29,7 @@ class EcotourismForm
 
                 FileUpload::make('image')
                     ->label('Foto Tempat')
-                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp', 'image/jpg'])
                     ->disk('public')
                     ->directory('ecotourisms')
                     ->visibility('public')
