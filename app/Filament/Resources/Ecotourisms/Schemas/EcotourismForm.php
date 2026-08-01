@@ -27,9 +27,13 @@ class EcotourismForm
                     ->rows(3)
                     ->columnSpanFull(),
 
-                TextInput::make('image')
-                    ->label('Foto Tempat (Path atau URL)')
-                    ->placeholder('Contoh: images/logo_tangsel.png atau https://...')
+                FileUpload::make('image')
+                    ->label('Foto Tempat')
+                    ->image()
+                    ->disk('public')
+                    ->directory('ecotourisms')
+                    ->visibility('public')
+                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }

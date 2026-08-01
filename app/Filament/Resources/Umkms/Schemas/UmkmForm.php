@@ -48,9 +48,13 @@ class UmkmForm
                     ->rows(3)
                     ->columnSpanFull(),
 
-                TextInput::make('image')
-                    ->label('Foto Usaha / Produk (Path atau URL)')
-                    ->placeholder('Contoh: images/logo_tangsel.png atau https://...')
+                FileUpload::make('image')
+                    ->label('Foto Usaha/Produk')
+                    ->image()
+                    ->disk('public')
+                    ->directory('umkms')
+                    ->visibility('public')
+                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }

@@ -29,9 +29,13 @@ class FacilityForm
                     ->rows(3)
                     ->columnSpanFull(),
 
-                TextInput::make('image')
-                    ->label('Foto / Gambar (Path atau URL)')
-                    ->placeholder('Contoh: images/logo_tangsel.png atau https://...')
+                FileUpload::make('image')
+                    ->label('Foto Fasilitas')
+                    ->image()
+                    ->disk('public')
+                    ->directory('facilities')
+                    ->visibility('public')
+                    ->shouldFetchFileInformation(false)
                     ->columnSpanFull(),
             ]);
     }
