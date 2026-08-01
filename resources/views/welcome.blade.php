@@ -498,7 +498,7 @@
                 >
                     <div class="w-full lg:w-1/2">
                         <div class="rounded-2xl overflow-hidden shadow-sm border border-slate-100 aspect-video bg-slate-100">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="{{ $facility->image ? asset('storage/'.$facility->image) : '/images/bg_uin.jpeg' }}" alt="{{ $facility->name }}" onerror="this.onerror=null;this.src='/images/bg_uin.jpeg';">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="{{ $facility->image ? (str_starts_with($facility->image, 'http') ? $facility->image : (str_starts_with($facility->image, 'images/') ? asset($facility->image) : asset('storage/'.$facility->image))) : '/images/bg_uin.jpeg' }}" alt="{{ $facility->name }}" onerror="this.onerror=null;this.src='/images/bg_uin.jpeg';">
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 flex flex-col justify-center">
