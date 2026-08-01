@@ -6,75 +6,23 @@
         $counts = $this->getModuleCounts();
     @endphp
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-        <x-filament::section>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <div style="width: 42px; height: 42px; border-radius: 12px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; border: 1px solid #a7f3d0;">
-                    📂
-                </div>
-                <div>
-                    <div style="font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase;">Modul Terpilih</div>
-                    <div style="font-size: 14px; font-weight: bold; color: #0f172a; margin-top: 2px;">
-                        @if($selectedModule === 'all') Rekapitulasi Lengkap Keranggan
-                        @elseif($selectedModule === 'umkm') UMKM
-                        @elseif($selectedModule === 'facilities') Fasilitas Publik
-                        @elseif($selectedModule === 'health_infos') Kesehatan
-                        @elseif($selectedModule === 'education') Pendidikan
-                        @elseif($selectedModule === 'ecotourisms') Ekowisata
-                        @elseif($selectedModule === 'announcements') Pengumuman & Agenda
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </x-filament::section>
-
-        <x-filament::section>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <div style="width: 42px; height: 42px; border-radius: 12px; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; border: 1px solid #bfdbfe;">
-                    📄
-                </div>
-                <div>
-                    <div style="font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase;">Format Berkas</div>
-                    <div style="font-size: 14px; font-weight: bold; color: #0f172a; margin-top: 2px;">
-                        @if($selectedFormat === 'pdf') PDF Berkop Surat (.pdf)
-                        @else Excel Spreadsheet (.csv)
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </x-filament::section>
-
-        <x-filament::section>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <div style="width: 42px; height: 42px; border-radius: 12px; background: #fffbeb; color: #d97706; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; border: 1px solid #fde68a;">
-                    📊
-                </div>
-                <div>
-                    <div style="font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase;">Total Baris Data</div>
-                    <div style="font-size: 14px; font-weight: bold; color: #0f172a; margin-top: 2px;">
-                        @if($selectedModule === 'all') {{ array_sum($counts) }} Baris Data
-                        @elseif($previewRecords) {{ $previewRecords->count() }} Baris Data
-                        @else 0 Baris Data
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </x-filament::section>
-    </div>
-
-    <!-- Configuration Form Section -->
+    <!-- Single Integrated Export Form Card -->
     <x-filament::section icon="heroicon-o-adjustments-horizontal">
         <x-slot name="heading">
-            Pilih Modul & Format Laporan
+            Opsi Laporan & Ekspor Data
         </x-slot>
         <x-slot name="description">
-            Pilih jenis data yang ingin diekspor. Tabel pratinjau di bawah akan menyesuaikan secara otomatis.
+            Pilih modul data dan format dokumen yang ingin Anda unduh atau cetak secara langsung.
         </x-slot>
 
         <form wire:submit="downloadReport" style="display: flex; flex-direction: column; gap: 1.25rem;">
             {{ $this->form }}
 
-            <div style="display: flex; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid #f1f5f9;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid #f1f5f9; flex-wrap: wrap; gap: 1rem;">
+                <div style="font-size: 13px; color: #64748b;">
+                    Total: <strong style="color: #0f172a;">{{ $selectedModule === 'all' ? array_sum($counts) : ($previewRecords ? $previewRecords->count() : 0) }}</strong> baris data siap diekspor
+                </div>
+
                 <x-filament::button type="submit" color="success" size="lg" icon="heroicon-o-arrow-down-tray">
                     Unduh / Cetak Laporan ({{ strtoupper($selectedFormat) }})
                 </x-filament::button>
@@ -82,50 +30,61 @@
         </form>
     </x-filament::section>
 
-    <!-- Preview Table Section -->
+    <!-- Clean Live Data Preview -->
     <x-filament::section icon="heroicon-o-eye" style="margin-top: 1.5rem;">
         <x-slot name="heading">
-            Pratinjau Live Data Laporan
-        </x-slot>
-        <x-slot name="description">
-            Tabel di bawah ini menampilkan pratinjau data aktual yang akan diunduh/dicetak.
+            Pratinjau Data Laporan
         </x-slot>
 
         @if($selectedModule === 'all')
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; padding: 0.5rem 0;">
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">UMKM Warga</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['umkm'] }} Usaha</div>
-                </div>
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">Fasilitas Publik</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['facilities'] }} Sarana</div>
-                </div>
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">Info Kesehatan</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['health_infos'] }} Faskes</div>
-                </div>
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">Pendidikan</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['education'] }} Instansi</div>
-                </div>
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">Ekowisata</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['ecotourisms'] }} Tempat</div>
-                </div>
-                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">Pengumuman & Agenda</div>
-                    <div style="font-size: 20px; font-weight: bold; color: #0f172a; margin-top: 4px;">{{ $counts['announcements'] }} Info</div>
-                </div>
-            </div>
-            <div style="font-size: 12px; color: #64748b; font-style: italic; margin-top: 0.75rem;">
-                *Mode Rekapitulasi Lengkap akan merangkum dan mengekspor seluruh 6 modul data di atas dalam 1 dokumen resmi.
-            </div>
-        @elseif($previewRecords && $previewRecords->count() > 0)
-            <div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 12px; margin-top: 0.5rem;">
+            <div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 12px;">
                 <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
                     <thead>
-                        <tr style="background: #f1f5f9; color: #334155; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+                        <tr style="background: #f8fafc; color: #475569; font-weight: 600; font-size: 12px; text-transform: uppercase;">
+                            <th style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0;">Modul Data</th>
+                            <th style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0;">Jumlah Record</th>
+                            <th style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0;">Status Dokumen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">UMKM Warga</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="success">{{ $counts['umkm'] }} Usaha</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9; background: #f8fafc;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Fasilitas Publik</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="info">{{ $counts['facilities'] }} Sarana</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Info Kesehatan</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="danger">{{ $counts['health_infos'] }} Faskes</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9; background: #f8fafc;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Sarana Pendidikan</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="primary">{{ $counts['education'] }} Instansi</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Ekowisata & Taman</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="success">{{ $counts['ecotourisms'] }} Tempat</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9; background: #f8fafc;">
+                            <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Pengumuman & Agenda</td>
+                            <td style="padding: 12px 16px;"><x-filament::badge color="warning">{{ $counts['announcements'] }} Info</x-filament::badge></td>
+                            <td style="padding: 12px 16px; color: #64748b;">Siap Dicetak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        @elseif($previewRecords && $previewRecords->count() > 0)
+            <div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+                    <thead>
+                        <tr style="background: #f8fafc; color: #475569; font-weight: 600; font-size: 12px; text-transform: uppercase;">
                             <th style="padding: 10px 14px; border-bottom: 1px solid #cbd5e1;">No</th>
                             @if($selectedModule === 'umkm')
                                 <th style="padding: 10px 14px; border-bottom: 1px solid #cbd5e1;">Nama Usaha</th>
